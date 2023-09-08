@@ -29,7 +29,7 @@ body{
 .card{
     background-color: var(--Very-dark-blue-card-BG);
     padding: 1rem;
-    max-width: 24%;
+    max-width: 23%;
     border-radius: 1rem;
     box-shadow: 10px 5px 50px;
 }
@@ -43,19 +43,25 @@ body{
     margin: auto;
 }
 
-.icon-view{
+
+.nft-image {
+    position: relative;
+}
+
+.nft-image .icon-view {
     position: absolute;
-    left: 33.34rem;
-    bottom: 17.9rem;
-    opacity: 1;
-    background-color: cyan;
-    padding: 7.6rem;
+    background-color: var(--Cyan);
     border-radius: 1rem;
     cursor: pointer;
     opacity: 0;
+    top: 0;
+    padding: 7.5rem;
+    width: 100%;
+    transition: 0.5s ease;
+    display: flex;
 }
 
-.icon-view:hover{
+.nft-image:hover .icon-view {
     opacity: 0.5;
 }
 
@@ -80,15 +86,27 @@ body{
 .nft-price{
     justify-content: space-between;
     display: flex;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .nft-price .price{
     color: var(--Cyan);
+    align-items: center;
+    display: flex;
+}
+
+.nft-price .price p{
+    margin: 0.3rem;
 }
 
 .nft-price .time{
     color: var(--Soft-blue);
+    align-items: center;
+    display: flex;
+}
+
+.nft-price .time p{
+    margin: 0.3rem;
 }
 
 .border{
@@ -104,14 +122,15 @@ body{
 }
 
 .profile img{
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     border: 1px solid var(--White);
     border-radius: 2rem;
 }
 
 .profile p{
-    margin-left: 1rem;
+    font-size: 0.9rem;
+    margin-left: 0.7rem;
     color: var(--Soft-blue);
 }
 
@@ -124,7 +143,7 @@ body{
     color: var(--Cyan);
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 375px) {
     .card{
         max-width: 75%;
     }
